@@ -65,5 +65,3 @@ const renderCharacters = characters => {
       charactersList.appendChild(listItem);
     });
   }
-
-
