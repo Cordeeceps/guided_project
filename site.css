@@ -5,19 +5,45 @@ h2,
 h3,
 h4,
 h5,
+
 p {
   margin: 0;
   padding: 0;
 }
 
+/* fonts */
+@font-face {
+  font-family: 'Starjedi';
+  src: url('/fonts/starjedi/Starjedi.woff') format('woff'), /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+       url('/fonts/starjedi/Starjedi.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+} 
+
+@font-face {
+  font-family: 'Starjedihol';
+  src: url('/fonts/starjedi/Starjedi.woff') format('woff'), /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+       url('/fonts/starjedi/Starjhol.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+} 
+
+.kanit-regular {
+  font-family: "Kanit", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
 :root {
-  font-family: Arial, Helvetica, sans-serif;
-  --dark1: black;
-  --light1: white;
-  --dark2: darkblue;
-  --light2: lightblue;
-  background-color: var(--light1);
+  font-family: kanit-regular, sans-serif;
+  --dark1: yellow;
+  --light1: rgb(27, 26, 25);
+  --dark2: rgb(255, 174, 0);
+  --light2: black;
+  background-image: url("https://i.pinimg.com/originals/37/45/c3/3745c3e50e0e529a2b4e0c78637e1ce3.jpg");
   color: var(--dark1);
+}
+
+h1 {
+  font-family: Starjedi, sans-serif;
+  font-size: 500%;    
 }
 
 button {
