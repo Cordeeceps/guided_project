@@ -19,9 +19,9 @@ p {
 } 
 
 @font-face {
-  font-family: 'Starjedihol';
-  src: url('/fonts/starjedi/Starjedi.woff') format('woff'), /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-       url('/fonts/starjedi/Starjhol.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+  font-family: 'StarJediHollow';
+  src: url('/fonts/starjedi/StarJediHollow.woff') format('woff'), /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+       url('/fonts/starjedi/StarJediHollow.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
 } 
 
 .kanit-regular {
@@ -39,11 +39,36 @@ p {
   --light2: black;
   background-image: url("https://i.pinimg.com/originals/37/45/c3/3745c3e50e0e529a2b4e0c78637e1ce3.jpg");
   color: var(--dark1);
+  pointer-events: auto;
 }
 
+/* headers */
 h1 {
+  font-family: StarJediHollow, sans-serif;
+  font-size: 500%;  
+  text-align: center;  
+}
+
+h2 {
   font-family: Starjedi, sans-serif;
-  font-size: 500%;    
+  font-size: 150%;   
+}
+
+/* search function */
+input#searchstring {
+}
+
+input {
+  display: block;
+  width: 95%;
+  font-weight: bold;
+  font-size: 1.1em;
+  line-height: 1.5em;
+  border: 2px solid var(--dark2);
+  outline: none;
+  margin: 5px;
+  background-color: black;
+  color: goldenrod;
 }
 
 button {
@@ -162,4 +187,57 @@ section#films a {
   margin: 10px;
   border-radius: 5px;
   border: 1px solid var(--dark2);
+}
+
+/* scroll css */
+.fade {
+  position: relative;
+  width: 100%;
+  min-height: 60vh;
+  top: -25px;
+  background-image: linear-gradient(0deg, transparent, black 75%);
+  z-index: 1;
+}
+
+.star-wars {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  height: 800px;
+  color: #feda4a;
+  font-family: 'Pathway Gothic One', sans-serif;
+  font-size: 500%;
+  font-weight: 600;
+  letter-spacing: 6px;
+  line-height: 150%;
+  perspective: 400px;
+  text-align: justify;
+}
+
+.crawl {
+  position: relative;
+  top: 99999px;
+  transform-origin: 50% 100%;
+  animation: crawl 60s linear;
+}
+
+.crawl > .title {
+  font-size: 90%;
+  text-align: center;
+}
+
+.crawl > .title h1 {
+  margin: 0 0 100px;
+  text-transform: uppercase;
+}
+
+@keyframes crawl {
+  0% {
+    top: -100px;
+    transform: rotateX(20deg)  translateZ(0);
+  }
+  100% { 
+    top: -6000px;
+    transform: rotateX(25deg) translateZ(-2500px);
+  }
 }
